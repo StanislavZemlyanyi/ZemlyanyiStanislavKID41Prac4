@@ -1,96 +1,112 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
 
 body {
-    background-color: #0d1117;
+    background-color: #1a1a1a;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    margin: 0;
-    font-family: 'Montserrat', sans-serif;
-}
+    min-height: 100vh;
+    font-family: 'Roboto Mono', monospace;
 
+}
 
 .keyboard-case {
-    background: #33363b;
-    padding: 25px;
-    border-radius: 20px;
-    box-shadow: 0 10px 0 #222, 0 20px 40px rgba(0, 0, 0, 0.8);
+    background: #2a2a2a;
+    padding: 20px;
+    border-radius: 12px;
     display: flex;
-    gap: 20px;
-}
 
+    gap: 25px;
+    box-shadow: 0 10px 0 #111, 0 15px 30px rgba(0, 0, 0, 0.7);
 
-.main-block {
-    display: grid;
-    grid-template-rows: repeat(6, 1fr);
-    gap: 10px;
-}
-
-.row {
-    display: flex;
-    gap: 10px;
 }
 
 
 .key {
-    background: #1c1e22;
-    color: #e6edf3;
-    min-width: 45px;
-    height: 45px;
-    border-radius: 8px;
+    background: #333;
+    color: #eee;
+    padding: 10px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 6px;
+    font-size: 11px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 12px;
+    box-shadow: 0 4px 0 #111;
+
     cursor: pointer;
-    border: 1px solid #444;
-    box-shadow: 0 4px 0 #000;
-    transition: all 0.1s;
-}
-
-
-.key:hover {
-    background: #2d3139;
-    color: #58a6ff;
+    transition: 0.1s;
 }
 
 .key:active {
-    transform: translateY(4px);
-    box-shadow: 0 0 0 #000;
-    background: #111;
+    transform: translateY(3px);
+
+    box-shadow: 0 1px 0 #111;
+    background: #444;
 }
 
+
+.main-block,
+.numpad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.row {
+    display: flex;
+    gap: 8px;
+}
 
 .backspace {
-    width: 100px;
-}
-
-.tab {
-    width: 65px;
-}
-
-.enter {
-    width: 90px;
-}
-
-.capslock {
     width: 85px;
 }
 
+.tab {
+    width: 55px;
+}
+
+.enter {
+    width: 80px;
+}
+
+.capslock {
+    width: 70px;
+}
+
 .shift {
-    width: 110px;
+    width: 95px;
 }
 
 .space {
-    width: 350px;
-}
-
-.ctrl {
-    width: 60px;
+    width: 280px;
 }
 
 
-.gap-small {
-    width: 30px;
+.grid-3x2,
+.arrows {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-bottom: 50px;
+}
+
+.plus {
+    height: 88px;
+    grid-row: span 2;
+}
+
+.num-enter {
+    height: 88px;
+    grid-row: span 2;
+}
+
+.zero {
+    width: 88px;
+}
+
+.empty {
+    opacity: 0;
+    pointer-events: none;
 }
